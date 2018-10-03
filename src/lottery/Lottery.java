@@ -7,13 +7,13 @@ import java.util.Random;
 
 public class Lottery {
     private List<Integer> list;
-    public List<Integer> getList() {
+    protected List<Integer> getList() {
         return list;
     }
-    public void setList(List<Integer> list) {
+    protected void setList(List<Integer> list) {
         this.list = list;
     }
-    public Lottery(){
+    protected Lottery(){
         list = draw();
     }
 

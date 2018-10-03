@@ -10,14 +10,14 @@ import java.util.Scanner;
 public class Gamer {
     private List<Integer> numbers;
 
-    public List<Integer> getNumbers() {
+    protected List<Integer> getNumbers() {
         return numbers;
     }
 
-    public void setNumbers(List<Integer> numbers) {
+    protected void setNumbers(List<Integer> numbers) {
         this.numbers = numbers;
     }
-    public Gamer(){
+    protected Gamer(){
         numbers = new ArrayList<>(6);
         Random r = new Random();
         while (numbers.size() != 6) {
@@ -29,7 +29,7 @@ public class Gamer {
             }
         }
     }
-    public Gamer(String filename) {
+    protected Gamer(String filename) {
         try {
             FileReader fr = new FileReader(filename);
             Scanner sc = new Scanner(fr);
@@ -46,7 +46,7 @@ public class Gamer {
             e.printStackTrace();
         }
     }
-    public long commonAmount(List<Integer> numbers) {
+    protected long commonAmount(List<Integer> numbers) {
         List<Integer> copy = new ArrayList<>(numbers);
         copy.retainAll(this.numbers);
         return copy.size();

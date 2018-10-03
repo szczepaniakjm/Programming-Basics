@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Menu {
-    public static Game start(){
+    protected static Game start(){
         System.out.println("NEW GAME");
         Scanner sc = new Scanner(System.in);
         int amountOfPlayers;
@@ -16,7 +16,7 @@ public class Menu {
         } while(amountOfPlayers <= 0);
         return new Game(amountOfPlayers);
     }
-    public static Map<Long,Integer> checkResults(Lottery l, List<Gamer>gamers){
+    protected static Map<Long,Integer> checkResults(Lottery l, List<Gamer>gamers){
         Map<Long,Integer> results = new LinkedHashMap<>();
         for (Gamer g : gamers) {
             Long a = g.commonAmount(l.getList());

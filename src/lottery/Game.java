@@ -3,13 +3,12 @@ package lottery;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Game {
     private Lottery l;
     private List<Gamer> gamers;
 
-    public Game(){}
-    public Game(int gamersAmount){
+    protected Game(){}
+    protected Game(int gamersAmount){
         this.l = new Lottery();
         this.gamers = new ArrayList<>();
         for (int i = 0; i < gamersAmount; i++) {
@@ -17,19 +16,19 @@ public class Game {
         }
     }
 
-    public Lottery getLottery() {
+    protected Lottery getLottery() {
         return l;
     }
 
-    public void setLottery(Lottery l) {
+    protected void setLottery(Lottery l) {
         this.l = l;
     }
 
-    public List<Gamer> getGamers() {
+    protected List<Gamer> getGamers() {
         return gamers;
     }
 
-    public void setGamers(List<Gamer> gamers) {
+    protected void setGamers(List<Gamer> gamers) {
         this.gamers = gamers;
     }
 
